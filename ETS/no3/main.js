@@ -1,18 +1,8 @@
-// Function to filter non-numeric characters from input
-function filterNonNumericInput(input) {
-    // Replace any non-numeric characters with an empty string
-    input.value = input.value.replace(/[^0-9]/g, '');
+function onlyNumberKey(evt) {
+
+    // Only ASCII character in that range allowed
+    let ASCIICode = (evt.which) ? evt.which : evt.keyCode
+    if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+        return false;
+    return true;
 }
-
-// Get the input fields
-var phoneInput = document.getElementById('phone');
-var countryCodeInput = document.getElementById('country_code');
-
-// Add event listeners to restrict input to numbers only
-phoneInput.addEventListener('input', function() {
-    filterNonNumericInput(phoneInput);
-});
-
-countryCodeInput.addEventListener('input', function() {
-    filterNonNumericInput(countryCodeInput);
-});
