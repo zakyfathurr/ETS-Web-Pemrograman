@@ -90,8 +90,8 @@
     </table>
     
     Phone :   
-    <input type="text" name="country_code"  value="+62" maxlength="3" size="1"/ required>   
-    <input type="text" name="phone" maxlength="16" size="15"/ required> <br> <br>  
+    <input type="text" onkeypress="return onlyNumberKey(event)" name="country_code"  value="+62" maxlength="3" size="1"/ required>   
+    <input type="text" onkeypress="return onlyNumberKey(event)" name="phone" maxlength="16" size="15"/ required> <br> <br>  
 
     Message :<br>
     <textarea rows="3" cols="60" required></textarea>
@@ -115,4 +115,3 @@
 <script src="main.js"></script>
 </body>
 </html>
-<!-- main.js -->
